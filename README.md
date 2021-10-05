@@ -1,5 +1,5 @@
 
-# Django E-commerce
+# Getit-Thefantasyshop E-commerce project
 
 This is a very simple e-commerce website built with Django.
 
