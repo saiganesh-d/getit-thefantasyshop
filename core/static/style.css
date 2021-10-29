@@ -5,31 +5,50 @@ body,
   height: 100%; }
 
 /* Half Page Carousel itself*/
-.carousel {
-  height: 50%; }
-  .carousel .carousel-inner {
-    height: 100%; }
-    .carousel .carousel-inner .carousel-item,
-    .carousel .carousel-inner .active {
-      height: 100%; }
+  @media (max-width: 776px) {
 
-/* Adjustment for mobile devices*/
-@media (max-width: 776px) {
-  .carousel {
-    height: 100%; } 
-  .container-flu {
+    .container-flu {
 
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
+  @media (max-width: 576px) {
+
+    .container-flu {
+      padding-left: 15px !important;
+    width: 100%;
+    padding-right: 15px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    }
+  
+
+  .carousel {
+    height: 20vh;
+  }
+}
+
+  .mdb-color.lighten-3 {
+    background-color: #5b7866 !important;
+  }
+
+  .container-flu {
+    
+    padding-left: 127px;
+    margin-right: 100px;
+
+  }
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
-  background-color: #929FBA; }
+  background-color: #929FBA;
+  bottom: 0;
+ }
   
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
@@ -38,9 +57,9 @@ body,
     left: 0;
     top: 0;
     height: 100%;
-    width: 78px;
-    background: #11101D;
-    padding: 6px 14px;
+    width: 125px;
+    background: #fff;
+    padding: 6px 0px ;
     z-index: 99;
     transition: all 0.5s ease;
   }
@@ -50,10 +69,11 @@ body,
   }
 
   .sidebar .logo-details {
-    height: 60px;
+    height: 145px;
     display: flex;
     align-items: center;
     position: relative;
+    right: 70%;
   }
 
   .sidebar .logo-details .icon {
@@ -61,13 +81,7 @@ body,
     transition: all 0.5s ease;
   }
 
-  .sidebar .logo-details .logo_name {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
+  
 
   .sidebar.open .logo-details .icon,
   .sidebar.open .logo-details .logo_name {
@@ -92,9 +106,9 @@ body,
   }
 
   .sidebar i {
-    color: #fff;
+    color: rgb(252, 248, 248);
     height: 60px;
-    min-width: 50px;
+    min-width: 0px;
     font-size: 28px;
     text-align: center;
     line-height: 60px;
@@ -107,27 +121,11 @@ body,
 
   .sidebar li {
     position: relative;
-    margin: 20px 20px;
+    margin: 20px 0;
     list-style: none;
   }
 
-  .sidebar li .tooltip {
-    position: absolute;
-    top: -20px;
-    left: calc(100% + 15px);
-    z-index: 3;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    transition: 0s;
-  }
-
+ 
   .sidebar li:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
@@ -136,62 +134,30 @@ body,
     transform: translateY(-50%);
   }
 
-  .sidebar.open li .tooltip {
-    display: none;
-  }
 
-  .sidebar input {
-    font-size: 15px;
-    color: #FFF;
-    font-weight: 400;
-    outline: none;
-    height: 50px;
-    width: 100%;
-    width: 50px;
-    border: none;
-    border-radius: 12px;
-    transition: all 0.5s ease;
-    background: #1d1b31;
-  }
 
-  .sidebar.open input {
-    padding: 0 20px 0 50px;
-    width: 100%;
-  }
+  
+  
 
-  .sidebar .bx-search {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    background: #1d1b31;
-    color: #FFF;
-  }
 
-  .sidebar.open .bx-search:hover {
-    background: #1d1b31;
-    color: #FFF;
-  }
-
-  .sidebar .bx-search:hover {
-    background: #FFF;
-    color: #11101d;
-  }
+ 
+ 
 
   .sidebar li a {
     display: flex;
     height: 100%;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background: #11101D;
+    background: #fff
+    ;
+    color: #000;
   }
 
   .sidebar li a:hover {
-    background: #FFF;
+    background: rgb(216, 157, 47);
   }
 
   .sidebar li a .links_name {
@@ -309,5 +275,9 @@ body,
   @media (max-width: 420px) {
     .sidebar li .tooltip {
       display: none;
+    }
+    .sidebar{
+      display: none;
+      width: 78px;
     }
   }

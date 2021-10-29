@@ -1,47 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
 <style>
-  .mdb-color.lighten-3 {
-    background-color: #5b7866 !important;
-  }
-
-  .container-flu {
-
-
-    margin-right: 100px;
-    margin-left: 100px;
-  }
-
-  @media (max-width: 776px) {
-
-    .container-flu {
-
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    @media (max-width: 576px) {
-
-      .container-flu {
-
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-
+  @media (max-width: 576px) {
     .carousel {
       height: 20vh;
+      padding-top: 50px;
     }
+  }
+
+  /* Google Font Link */
 </style>
+<script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+    if (sidebar.classList.contains("open")) {
+      closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    } else {
+      closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+    }
+  }
+</script>
 
 <main>
+
+
+
+
 
   <div class="container-flu">
     <div id="carouselExampleSlidesOnly" class="carousel slide mt-1 mb-1" data-ride="carousel">
@@ -50,10 +50,10 @@
           <img class="d-block w-100" src="media/ss.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="media/ss.jpg" alt="Second slide">
+          <img class="d-block w-100" src="media/ss2.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="media/ss.jpg" alt="Third slide">
+          <img class="d-block w-100" src="media/ss3.jpg" alt="Third slide">
         </div>
       </div>
     </div>
