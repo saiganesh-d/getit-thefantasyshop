@@ -6,6 +6,7 @@ This is a very simple e-commerce website built with Django.
 
 
 ---
+# visit the project hosted on heroku here [getit-thefantasyshop](https://getit-thefantasyshop.herokuapp.com/)
 
 ## Project Summary
 
