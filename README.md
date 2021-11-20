@@ -3,9 +3,7 @@
 
 This is a very simple e-commerce website built with Django.
 
-## Quick demo
 
-[![alt text](https://justdjango.s3-us-west-2.amazonaws.com/media/gifs/djecommerce.gif "Logo")](https://youtu.be/z4USlooVXG0)
 
 ---
 
@@ -31,10 +29,9 @@ Clone or download this repository and open it in your editor of choice. In a ter
 virtualenv env
 ```
 
-That will create a new folder `env` in your project directory. Next activate it with this command on mac/linux:
 
 ```
-source env/bin/active
+
 ```
 
 Then install the project dependencies with
